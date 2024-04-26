@@ -50,18 +50,28 @@ https://en.bem.info/methodology/quick-start/*/
 }
 
 /*Sección Title*/
+
+.menu__header{
+    display: flex;
+}
+
 .menu__title{
-    display: inline-block;
-    align-items: center;
+    display: flex;
+    justify-content: center; 
     margin-left: 10px;
+    margin-top: 15px;
+    align-items: center;
 }
 
 .menu__list{
     display: flex;
     margin-right: 40px;
     gap: 20px;
-}
+    }
 
+.menu__list__item:hover{
+    font-size: 1.5em;
+}
 
 /*Sección Title*/
 
@@ -236,7 +246,8 @@ https://en.bem.info/methodology/quick-start/*/
 }
 
 .experience__botao--demo, 
-.experiencia__botao--repo {
+.experiencia__botao--repo,
+.formcontato__botao {
     padding: 10px;
     background: rgb(53, 104, 233);
     border:none;
@@ -307,16 +318,58 @@ Utiliza las referencias de los breakpoints @media abajo */
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 450px) {
 
 /*Menu*/
+.menu__list__item:nth-child(1),
+.menu__list__item:nth-child(2),
+.menu__list__item:nth-child(3),
+.menu__list__item:nth-child(4),
+.menu__list__item:nth-child(5){
+    display: none;
+}
 
 /*Titulo*/
+.title__div{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.title__profile{
+    width: 40%;
+}
+
+.title__bio{
+    font-size: 22px;
+    font-weight: bolder;
+    padding-left: 20px;
+}
+
+.title__subsection{
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.about__title,
+.skills__title,
+.hobbies__title,
+.academic__title,
+.experience__section__title{
+    font-size: 22px;
+    font-weight: regular;
+    padding-left: 20px;
+}
 
 /*Sección sobre mi*/
-
+.about__paragraph{
+    font-size: 14px;
+}
 /*Skills*/
+.skills__line{
+    display: flex;
 
+}
 /*Hobbies*/
  
 /*Formación Académica*/
